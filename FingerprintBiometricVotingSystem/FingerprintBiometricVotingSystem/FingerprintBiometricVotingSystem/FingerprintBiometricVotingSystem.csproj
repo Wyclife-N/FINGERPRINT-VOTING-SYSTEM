@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C9C57A5-6AC9-45FC-92A2-F5069CB6EC02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FingerprintBiometricVotingSystem</RootNamespace>
+    <AssemblyName>FingerprintBiometricVotingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Business_Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Business_Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPGuiNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d4f4a0bd9c559145, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPGuiNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCandidate.Designer.cs">
+      <DependentUpon>AddCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddElection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddElection.Designer.cs">
+      <DependentUpon>AddElection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Collation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collation.Designer.cs">
+      <DependentUpon>Collation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnection.cs" />
+    <Compile Include="Election.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Election.Designer.cs">
+      <DependentUpon>Election.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollmentForm.Designer.cs">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegAdmin.Designer.cs">
+      <DependentUpon>RegAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voter.Designer.cs">
+      <DependentUpon>Voter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voting.Designer.cs">
+      <DependentUpon>Voting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scaning.Designer.cs">
+      <DependentUpon>Scaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification.cs" />
+    <Compile Include="VerificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerificationForm.Designer.cs">
+      <DependentUpon>VerificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoterRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterRegistration.Designer.cs">
+      <DependentUpon>VoterRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="votingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>votingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winner.Designer.cs">
+      <DependentUpon>Winner.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCandidate.resx">
+      <DependentUpon>AddCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddElection.resx">
+      <DependentUpon>AddElection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collation.resx">
+      <DependentUpon>Collation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Election.resx">
+      <DependentUpon>Election.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollmentForm.resx">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegAdmin.resx">
+      <DependentUpon>RegAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voter.resx">
+      <DependentUpon>Voter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voting.resx">
+      <DependentUpon>Voting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Scaning.resx">
+      <DependentUpon>Scaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerificationForm.resx">
+      <DependentUpon>VerificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterRegistration.resx">
+      <DependentUpon>VoterRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winner.resx">
+      <DependentUpon>Winner.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="votingDataSet.xsc">
+      <DependentUpon>votingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="votingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>votingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="votingDataSet.xss">
+      <DependentUpon>votingDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enrollment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biometric Voting System2.jpg" />
+    <None Include="Resources\biometric voting system.jpg" />
+    <None Include="Resources\todo.png" />
+    <None Include="Resources\technic6.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\registration_icon_up.png" />
+    <None Include="Resources\reading3.png" />
+    <None Include="Resources\question_icon.jpg" />
+    <None Include="Resources\personal.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\Fingerprints Biometric Student Attendance Managemenet System.jpg" />
+    <None Include="Resources\Fingerprint Biometric Attendance Managemenet System.jpg" />
+    <None Include="Resources\excercise.png" />
+    <None Include="Resources\Enrollment2.png" />
+    <None Include="Resources\conversation1.png" />
+    <None Include="Resources\attendance_list_icon.png" />
+    <None Include="Resources\Enrollment1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
